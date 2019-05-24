@@ -1,0 +1,23 @@
+.Header {
+  text-align: center;
+  background: white;
+  width: 100%;
+  height:40px;
+  border-bottom: 1px solid #c20831;
+  overflow:hidden;
+}
+
+.Header h1 {
+  font-size: 1.2em;
+  font-weight: normal;
+  margin:0;
+  padding:0 0 2px 0;
+  color: #c20831;
+}
+
+.Header p {
+  font-size: 0.9em;
+  margin: 0px;
+  padding: 0;
+  color: black;
+}
