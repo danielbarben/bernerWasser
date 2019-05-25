@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import './Ending.css';
-import data from '../Running/water.js';
+import data from '../../data/rivers.js';
 
 class End extends Component {
   constructor(props) {
@@ -69,7 +69,7 @@ class End extends Component {
       wrongPrint = wrongTmp[0]
     }
     switch (this.props.correct.length) {
-      case 5: newTitle = 'Wow, alles richtig!'; newMessage = `Du hast ` + correctPrint + `richtig erkannt.`; 
+      case 5: newTitle = 'Wow, alles richtig!'; newMessage = `Du hast ` + correctPrint + ` richtig erkannt.`; 
       break;
       case 4: newTitle = 'Nicht schlecht!'; newMessage = `Du hast ` + correctPrint + ' richtig erkannt, nicht aber ' + wrongPrint + '.'; 
       break;

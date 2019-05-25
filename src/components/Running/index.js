@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import './Running.css';
-import data from './water.js';
+import data from '../../data/rivers.js';
 import Mapsvg from '../../img/Mapsvg.js'
 //import Text from './text.js';
 
@@ -159,7 +159,17 @@ class Running extends Component {
     })
   }
 
+dataTest = () => {
+  let color = this.colors[4];
+  data.forEach(function (ignore, i) {
+    let test = document.getElementById(data[i].id);
+    test.style.stroke = color
+    })
+}
+
   start = () => {
+    //this.dataTest();
+    
     let level = this.props.gameLevel;
       let newRivers = [];
       //Gewässer im passenden Level finden

@@ -13,7 +13,7 @@ class Landingpage extends Component {
         <h1 className="intro">BernerWasser</h1>
         <p>Die Aare kennt jeder. Doch wie sieht es mit den anderen Berner Gewässern aus? Teste Dein Wissen!</p>
         <p>Quiz starten:</p>
-        <span className="button intro" onClick = {() => this.props.gameStart('leicht')}>leicht</span><span className="button intro" onClick = {() => this.props.gameStart('mittel')}>mittel</span><span className="button intro" onClick = {() => this.props.gameStart('schwer')}>schwer</span>
+        <span className="button intro" onClick = {() => this.props.gameStart('leicht')}>leicht</span><span className="button intro" onClick = {() => this.props.gameStart('mittel')}>mittel</span><span className="button intro" onClick = {() => this.props.gameStart('schwierig')}>schwer</span>
         </div>
     );
   }
