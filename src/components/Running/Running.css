@@ -11,12 +11,12 @@
   color: white;
 }
 
-.anzeige, .btnbar, .punkte {
+.anzeige, .btnbar, .points {
   width:100%;
   color: black;
 }
 
-.punkte {
+.points {
   font-size: 0.9em;
   display: flex;
   flex-flow: row wrap;
@@ -75,12 +75,18 @@
 }
 
 .point {
+  margin-left: 4px;
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+}
+
+.point_bak {
   border-radius: 0.45em;
   margin-left: 4px;
   width: 0.9em;
   height: 0.9em;
 }
-
 * {
   box-sizing: border-box;
 }
