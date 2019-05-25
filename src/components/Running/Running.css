@@ -65,17 +65,11 @@
 #svgMap {
   max-height: 100%;
   max-width: 100%;
-  background-color:orange;
-}
-
-#map {
-  max-height:100%;
-  max-width: 100%;
-  background-color:orange;
 }
 
 .point {
   margin-left: 4px;
+  border-radius:50%;
   width: 1em;
   height: 1em;
   display: inline-block;
