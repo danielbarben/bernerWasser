@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import './Running.css';
 import data from './water.js';
-import Mapsvg from './Mapsvg.js'
+import Mapsvg from '../../img/Mapsvg.js'
 //import Text from './text.js';
 
 class Running extends Component {
@@ -121,8 +121,7 @@ class Running extends Component {
     document.getElementById(data[wrongNumber].id).style.stroke = this.colors[4];
     this.wait([rightNumber, wrongNumber]);
   })
-} 
-
+}
 
   verify = (clickedButton) => {
     // richtige Numer
@@ -194,7 +193,7 @@ componentDidMount() {
     })
     return (
       <div className="Running">
-        <div className="anzeige" id='buzzer'>{this.state.message}</div>
+        <div className="anzeige">{this.state.message}</div>
         <div className = "btnbar">{buttons}</div>
         <div className='punkte'>Punkte: {points}</div>
         <Mapsvg className="map"></Mapsvg>
