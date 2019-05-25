@@ -29,18 +29,15 @@
 .anzeige {
   font-size:1em;
   margin: 6px 0 6px 0;
-
   }
 
 .btnbar {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  align-items: flex-start;
   background-color: white;
-  height:auto;
   margin: 0 0 4px 0;
-  background:red;
+  background:yellow;
 }
 .btnbar .btn {
   background-color: color;
@@ -79,4 +76,8 @@
   margin-left: 2px;
   width: 0.9em;
   height: 0.9em;
+}
+
+* {
+  box-sizing: border-box;
 }
