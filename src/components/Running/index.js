@@ -195,8 +195,8 @@ componentDidMount() {
       <div className="Running">
         <div className="anzeige">{this.state.message}</div>
         <div className = "btnbar">{buttons}</div>
-        <div className='punkte'>Punkte: {points}</div>
-        <Mapsvg className="map"></Mapsvg>
+        <div className="punkte">Punkte: {points}</div>
+        <Mapsvg className="svgMap"></Mapsvg>
       </div>
     );
   }

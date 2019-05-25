@@ -40,7 +40,7 @@
   background-color: white;
   height:auto;
   margin: 0 0 4px 0;
-  background:white;
+  background:red;
 }
 .btnbar .btn {
   background-color: color;
@@ -71,6 +71,7 @@
 #svgMap {
   max-height: 100%;
   max-width: 100%;
+  background-color:green;
 }
 
 .point {
