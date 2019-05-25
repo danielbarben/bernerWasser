@@ -8,12 +8,12 @@ class Running extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      btnText: ['', '', '', ''],
+      btnText: [],
       btn: [{riverId:0, color:'btn grey'}, {riverId:1, color:'btn grey'},{riverId:2, color:'btn grey'},{riverId:3, color:'btn grey'}],
       points: ['point grey', 'point grey', 'point grey', 'point grey', 'point grey'],
       riversToFind: [],
       clickable: true, //Buttons active
-      currentRiver: 0, //Lösungsnummer der aktuellen Frage, Position in Water
+      currentRiver:0,//Lösungsnummer der aktuellen Frage, Position in Water
       correct: [],
       wrong: [],
       questionCount: 0,

@@ -9,6 +9,12 @@
   justify-content: flex-start;
   font-size: calc(10px + 2vmin);
   color: white;
+  background: url(../../img/img02.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  
 }
 
 .anzeige, .btnbar, .points {
@@ -33,9 +39,7 @@
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  background-color: white;
   margin: 0 0 4px 0;
-  background:violet;
 }
 .btnbar .btn {
   cursor:pointer;
