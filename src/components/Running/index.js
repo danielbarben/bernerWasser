@@ -188,14 +188,14 @@ componentDidMount() {
     })
     let buttons = this.state.btn.map((item, index) => {
       let buttonText = data[item.riverId].name;
-    //let classes = this.state.clickable ? noHover : item.colors;
       return <div position={index} id={item.riverId} className={item.color} onClick={()=> this.state.clickable ? this.verify(index) : ''} key={index}>{buttonText}</div>
     })
     return (
       <div className = "Running">
         <div className = "anzeige">{this.state.message}</div>
         <div className = "btnbar">{buttons}</div>
-        <div className = "punkte">Punkte: {points}</div>
+        {// <div className = "punkte">Punkte: {points}</div>
+        }
         <Mapsvg className="svgMap"></Mapsvg>
       </div>
     );
