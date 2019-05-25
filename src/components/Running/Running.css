@@ -13,7 +13,6 @@
 
 .anzeige, .btnbar, .punkte {
   width:100%;
-  background: white;
   color: black;
 }
 
@@ -23,7 +22,6 @@
   flex-flow: row wrap;
   align-items:center;
   justify-content: center;
-  background:white
 }
 
 .anzeige {
@@ -37,19 +35,19 @@
   justify-content: center;
   background-color: white;
   margin: 0 0 4px 0;
-  background:yellow;
+  background:violet;
 }
 .btnbar .btn {
   cursor:pointer;
 	color:#ffffff;
   width:46%;
+  margin: 2px;
   text-decoration:none;
   text-shadow:0px 1px 0px #2f6627;
   height: 1.8em;
   display: flex;
   align-items: center;
   justify-content: center;
-  
 }
 
 .grey {
