@@ -53,7 +53,7 @@ class Running extends Component {
     let newRiver = this.state.riversToFind[newCount]
     this.setState({
       questionCount: newCount,
-      message: 'Wie heisst das blaue Gewässer?',
+      message: 'Wie heisst das blau markierte Gewässer?',
       currentRiver: newRiver,
       clickable: true
     }, function()  {
@@ -144,6 +144,7 @@ class Running extends Component {
     this.colorize();
     //Gewässer blau färben
     document.getElementById(data[this.state.currentRiver].id).style.stroke = this.colors[2];
+    
     //zufällig drei weitere Gewässer finden
     let collectAnswers = [];
     collectAnswers.push({riverId:this.state.riversToFind[this.state.questionCount], color:'btn grey'});
@@ -169,7 +170,6 @@ dataTest = () => {
 
   start = () => {
     //this.dataTest();
-    
     let level = this.props.gameLevel;
       let newRivers = [];
       //Gewässer im passenden Level finden
@@ -181,7 +181,7 @@ dataTest = () => {
       this.shuffle(newRivers);
       this.setState({
         riversToFind: newRivers,
-        message: 'Wie heisst das blaue Gewässer?',
+        message: 'Wie heisst das blau markierte Gewässer?',
         currentRiver: newRivers[0]
       }, function() {
         this.ask();
@@ -202,11 +202,11 @@ componentDidMount() {
     })
     return (
       <div className = "Running">
-        <div className = "anzeige">{this.state.message}</div>
-        <div className = "btnbar">{buttons}</div>
-        <div className = "points">Punkte: {points}</div>        
         <Mapsvg className = "svgMap"></Mapsvg>
+        <div className = "anzeige intro">{this.state.message}</div>
         
+        <div className = "points">Punkte: {points}</div>        
+        <div className = "btnbar">{buttons}</div>
       </div>
     );
   }

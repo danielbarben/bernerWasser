@@ -22,7 +22,6 @@
 .Ending p {
   margin-bottom: 20px;
 }
-
 .Ending .button {
   background-color:#c20831;
 	cursor:pointer;
@@ -37,7 +36,6 @@
 .button:hover {
 	background-color:#e4003a;
 }
-
 .intro {
 	-webkit-animation: intro 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
 	animation: intro 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
