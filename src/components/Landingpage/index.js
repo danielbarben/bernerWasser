@@ -7,6 +7,7 @@ class Landingpage extends Component {
     this.state = {
     }
   }
+  
   render() {
     return (
       <div className="Landingpage">
