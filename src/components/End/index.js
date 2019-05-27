@@ -16,7 +16,6 @@ class End extends Component {
   getAdvice = () => {
     let newAdvice = '';
     let newLevel = '';
-    console.log(this.props.gameLevel)
   if (this.props.gameLevel === 'leicht' && this.props.correct.length > 3) {
     newAdvice = 'Schaffst Du auch ein höheres Level?';
     newLevel = 'mittel';
@@ -41,7 +40,6 @@ class End extends Component {
     newAdvice = 'Versuch es doch mit einem einfacheren Level';
     newLevel = 'mittel'
   }
-  console.log(this.props.gameLevel)
   this.setState({
     advice: newAdvice,
     level: newLevel,
@@ -87,8 +85,6 @@ class End extends Component {
       title: newTitle,
       message:newMessage
     })
-    console.log(this.props.wrong)
-    console.log(this.props.correct.length)
   }
 
   componentDidMount() {
