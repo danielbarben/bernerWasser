@@ -20,7 +20,8 @@ class Running extends Component {
       message: 'Gleich geht es los!'
     }
   }
-  colors = ['#dbede2', '#FFFFFF', '#00a1db', '#009869', '#c13286'] //0: Kantonshintergrund, 1: Wasser neutral, 2: Fluss ausgewählt, 3: grün, 4: rot
+  colors = ['#dbede2', '#FFFFFF', '#ffa500', '#009869', '#c13286'] //0: Kantonshintergrund, 1: Wasser neutral, 2: Fluss ausgewählt, 3: grün, 4: rot
+  //00a1db
 
   colorize = () => {
     //Kanton färben
@@ -53,7 +54,7 @@ class Running extends Component {
     let newRiver = this.state.riversToFind[newCount]
     this.setState({
       questionCount: newCount,
-      message: 'Wie heisst das blau markierte Gewässer?',
+      message: 'Wie heisst das orange markierte Gewässer?',
       currentRiver: newRiver,
       clickable: true
     }, function()  {
@@ -181,7 +182,7 @@ dataTest = () => {
       this.shuffle(newRivers);
       this.setState({
         riversToFind: newRivers,
-        message: 'Wie heisst das blau markierte Gewässer?',
+        message: 'Wie heisst das orange markierte Gewässer?',
         currentRiver: newRivers[0]
       }, function() {
         this.ask();
