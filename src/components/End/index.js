@@ -99,8 +99,8 @@ class End extends Component {
     return (
       <div className="Ending">
         <h1>{this.state.title}</h1>
-        <div>{this.state.message}</div>
-        <div>{this.state.advice}</div>
+        <div><p>{this.state.message}</p></div>
+        <div><p>{this.state.advice}</p></div>
         <div>{this.state.button}</div>
         </div>
     );

@@ -20,6 +20,7 @@ h1 {
 }
 p {
   margin-bottom: 6px;
+  max-width:500px;
 }
 .Landingpage .button {
 	background-color:#c20831;
