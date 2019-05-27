@@ -74,6 +74,11 @@
 #svgMap {
   max-height: 100%;
   max-width: 100%;
+  color: red;
+}
+
+#Beschriftung {
+  color: red;
 }
 
 .point {
