@@ -148,10 +148,14 @@ class Running extends Component {
     
     //zufällig drei weitere Gewässer finden
     let collectAnswers = [];
+    let helper = [];
+    helper.push(this.state.riversToFind[this.state.questionCount])
     collectAnswers.push({riverId:this.state.riversToFind[this.state.questionCount], color:'btn grey'});
     while (collectAnswers.length < 4) {
       let tmpNumber = randomNumber();
-      if (tmpNumber !== this.state.currentRiver) {
+      if (helper.includes(tmpNumber) === false) {
+      //if (tmpNumber !== this.state.currentRiver) {
+        helper.push(tmpNumber)
         collectAnswers.push({riverId:tmpNumber, color:'btn grey'})
       };
     }
