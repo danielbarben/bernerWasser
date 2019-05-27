@@ -11,14 +11,16 @@
   align-items: center;
   justify-content: flex-start;
   font-size: calc(10px + 2vmin);
-  color: white;
   background: url(../../img/img01.jpg) no-repeat center top fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
 }
-
+.ttt {
+  color:red;
+  background:red;
+}
 .anzeige, .btnbar, .points {
   width:100%;
   color: white;
@@ -35,7 +37,6 @@
 }
 
 .anzeige {
-  font-size:1em;
   margin: 6px 0 6px 0;
   }
 
@@ -74,13 +75,8 @@
 #svgMap {
   max-height: 100%;
   max-width: 100%;
-  color: red;
 }
-
-#Beschriftung {
-  color: red;
-}
-
+ 
 .point {
   margin-left: 4px;
   border-radius:50%;

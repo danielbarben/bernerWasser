@@ -115,27 +115,29 @@ function svgmap() {
 			l0.8-1.5l-1.2-1.9l0.6-0.2l1.1,0.4l1.1,0.5l1.9-2l-0.3-1.7l-1.1,1.7l-1.8-0.7l-0.2-2.8l-2.3-1.4l0.4-0.9l-1.1-3.3l4.4-7l-2.4-0.5
 			l-6.3,5.7l1.9,1.5l-1.7,1.5l0.1,3.4L92.5,339.1L92.5,339.1z"/>
 	</g>
-	<g id="Bullets">
+	<g id="Bullets" fill="grey">
 		<circle id="Courterlary" cx="93" cy="83" r="3"/>
 		<circle id="Biel" cx="143" cy="111" r="3"/>
 		<circle id="Aarberg" cx="156" cy="162" r="3"/>
 		<circle id="Bern" cx="213" cy="208" r="3"/>
 		<circle id="Thun" cx="284" cy="310" r="3"/>
 		<circle id="Langnau" cx="331" cy="210" r="3"/>
-		<circle id="Langenthal" cx="347" cy="53" r="3"/>
+		{//<circle id="Langenthal" cx="347" cy="53" r="3"/>
+		}
 		<circle id="Wangen" cx="281" cy="59" r="3"/>
 		<circle id="Interlaken" cx="363" cy="347" r="3"/>
 		<circle id="Frutigen" cx="292" cy="390" r="3"/>
 		<circle id="Saanen" cx="151" cy="445" r="3"/>
 	</g>
-	<g id="Beschriftung" font-size="1em">
-		<text transform="matrix(1 0 0 1 98 83)">Courtelary</text>
+	<g id="Beschriftung">
+		<text className="ttt" transform="matrix(1 0 0 1 98 83)">Courtelary</text>
 		<text transform="matrix(1 0 0 1 148 111)">Biel</text>
 		<text transform="matrix(1 0 0 1 160 162)">Aarberg</text>
 		<text transform="matrix(1 0 0 1 218 208)">Bern</text>
 		<text transform="matrix(1 0 0 1 287 310)">Thun</text>
 		<text transform="matrix(1 0 0 1 336 210)">Langnau</text>
-		<text transform="matrix(1 0 0 1 352 53)">Langenthal</text>
+		{//<text transform="matrix(1 0 0 1 352 53)">Langenthal</text>
+		}
 		<text transform="matrix(1 0 0 1 286 59)">Wangen</text>
 		<text transform="matrix(1 0 0 1 368 347)">Interlaken</text>
 		<text transform="matrix(1 0 0 1 297 390)">Frutigen</text>

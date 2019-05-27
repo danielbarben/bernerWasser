@@ -29,6 +29,9 @@ class Running extends Component {
     //Seen und Flüsse färben
     document.getElementById('Seen').style.fill = this.colors[1];
     document.getElementById('Fluesse').style.stroke = this.colors[1];
+    let ttt= document.getElementById('Beschriftung')
+    ttt.style.fill ="grey"
+    ttt.style.fontSize = "16px"
   }
   
   //Shuffle Questions
@@ -174,6 +177,8 @@ dataTest = () => {
 }
 
   start = () => {
+    
+    //ttt.style.fontSize = "0.9em"
     //this.dataTest();
     let level = this.props.gameLevel;
       let newRivers = [];
