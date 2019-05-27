@@ -8,16 +8,15 @@
 }
 
 .Header h1 {
-  font-size: 1.2em;
+  font-size: 0.9em;
   font-weight: normal;
   margin:0;
-  padding:0 0 2px 0;
   color: #c20831;
 }
 
 .Header p {
-  font-size: 0.9em;
-  margin: 0px;
+  font-size: 0.7em;
+  margin: 0;
   padding: 0;
   color: black;
 }
