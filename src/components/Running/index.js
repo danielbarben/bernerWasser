@@ -49,7 +49,7 @@ class Running extends Component {
     return array;
   }
   end = () => {
-      this.props.gameEnding(this.state.correct, this.state.wrong)
+      this.props.gameEnding(this.state.correct, this.state.wrong, this.props.gameLevel)
     }
   
   next = () => {
@@ -157,7 +157,6 @@ class Running extends Component {
     while (collectAnswers.length < 4) {
       let tmpNumber = randomNumber();
       if (helper.includes(tmpNumber) === false) {
-      //if (tmpNumber !== this.state.currentRiver) {
         helper.push(tmpNumber)
         collectAnswers.push({riverId:tmpNumber, color:'btn grey'})
       };
@@ -177,9 +176,6 @@ dataTest = () => {
 }
 
   start = () => {
-    
-    //ttt.style.fontSize = "0.9em"
-    //this.dataTest();
     let level = this.props.gameLevel;
       let newRivers = [];
       //Gewässer im passenden Level finden
