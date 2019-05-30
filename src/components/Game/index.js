@@ -1,8 +1,13 @@
 import React, { Component } from 'react';
+import ReactGA from 'react-ga';
 import './Game.css';
 import Landingpage from '../Landingpage';
 import Running from '../Running';
 import End from '../End';
+ReactGA.initialize('UA-141016488-1', {
+  debug: true
+});
+ReactGA.pageview(window.location.pathname + window.location.search);
 
 class Game extends Component {
   constructor(props) {
@@ -14,15 +19,25 @@ class Game extends Component {
       correct: [ ]
     }
   }
-
+  
   start = (level) => {
+    ReactGA.event({
+      category: 'button',
+      action: 'start game',
+      label: level
+    })
     this.setState({
       gameState: 'running',
       level: level
     })
   }
 
-  ending = (correct, wrong) => {
+  ending = (correct, wrong, level) => {
+    ReactGA.event({
+      category: 'button',
+      action: 'ending game',
+      level: level
+    })
     this.setState({
       gameState: 'ending',
       correct: correct,
@@ -31,6 +46,11 @@ class Game extends Component {
   }
 
   again = (level) => {
+    ReactGA.event({
+      category: 'button',
+      action: 'restart game',
+      level: level
+    })
     this.setState({
       gameState: 'running',
       level: level

@@ -1,6 +1,11 @@
 import React, {Component} from 'react';
+import ReactGA from 'react-ga';
 import './Ending.css';
 import data from '../../data/rivers.js';
+ReactGA.initialize('UA-141016488-1', {
+  debug: true
+});
+ReactGA.pageview(window.location.pathname + window.location.search);
 
 class End extends Component {
   constructor(props) {
@@ -50,7 +55,14 @@ class End extends Component {
   getMessage = () => {
     let newMessage = '';
     let newTitle = '';
-    let correctTmp = this.props.correct.map(function(index) {return data[index].artikel + ' ' + data[index].name})
+    let correctTmp = this.props.correct.map(function(index) {
+      ReactGA.event({
+        category: 'evaluation',
+        action: 'correct',
+        label: data[index].name
+      })
+      return data[index].artikel + ' ' + data[index].name
+    })
     let correctPrint = '';
     if (correctTmp.length > 1) {
       correctPrint = correctTmp.slice(0, -1).join(', ')+' und '+correctTmp.slice(-1);
@@ -58,7 +70,14 @@ class End extends Component {
     else {
       correctPrint = correctTmp[0]
     }
-    let wrongTmp = this.props.wrong.map(function(index) {return data[index].artikel + ' ' + data[index].name})
+    let wrongTmp = this.props.wrong.map(function(index) {
+      ReactGA.event({
+        category: 'evaluation',
+        action: 'wrong',
+        label: data[index].name
+      })
+      return data[index].artikel + ' ' + data[index].name
+    })
     let wrongPrint = '';
     if (wrongTmp.length > 1) {
       wrongPrint = wrongTmp.slice(0, -1).join(', ')+' und '+wrongTmp.slice(-1);
