@@ -142,24 +142,34 @@ class Running extends Component {
   }
 
   ask() {
-    let randomNumber = () => {
-      return Math.floor(Math.random() * (data.length))
-    }
     this.colorize();
+    let lg = [];
     //Gewässer blau färben
     document.getElementById(data[this.state.currentRiver].id).style.stroke = this.colors[2];
-    
+    //Gewässer mit passender Lösungsgruppe finden
+    let currentLg = data[this.state.currentRiver].lg
+    data.forEach(function (ignore, i) {
+      if (data[i].lg === currentLg) {
+        lg.push(i);
+      }
+    })
+    lg = this.shuffle(lg)
     //zufällig drei weitere Gewässer finden
     let collectAnswers = [];
     let helper = [];
+    // gesuchte Nummer: this.state.riversToFind[this.state.questionCount])
     helper.push(this.state.riversToFind[this.state.questionCount])
+    // gesuchte Nummer als Button speichern
     collectAnswers.push({riverId:this.state.riversToFind[this.state.questionCount], color:'btn grey'});
+    // drei weitere Buttons finden
+    let i = 0;
     while (collectAnswers.length < 4) {
-      let tmpNumber = randomNumber();
+      let tmpNumber = lg[i];
       if (helper.includes(tmpNumber) === false) {
         helper.push(tmpNumber)
         collectAnswers.push({riverId:tmpNumber, color:'btn grey'})
       };
+      i++
     }
     this.shuffle(collectAnswers)
     this.setState({
@@ -173,6 +183,19 @@ dataTest = () => {
     let test = document.getElementById(data[i].id);
     test.style.stroke = color
     })
+}
+
+lgTest =() => {
+  let lg= [];
+  data.forEach(function (ignore, i) {
+    if (data[i].lg === 0) {
+      lg.push(i);
+    }
+  })
+  for (let i = 0; i < lg.length; i++) {
+    console.log(data[lg[i]].id)
+    document.getElementById(data[lg[i]].id).style.stroke = this.colors[2];
+  };
 }
 
   start = () => {
@@ -191,6 +214,8 @@ dataTest = () => {
         currentRiver: newRivers[0]
       }, function() {
         this.ask();
+        //this.colorize();
+        //this.lgTest();
       })
     }
 

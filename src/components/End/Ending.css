@@ -21,6 +21,7 @@
 }
 .Ending p {
   margin-bottom: 20px;
+  max-width:600px;
 }
 .Ending .button {
   background-color:#c20831;
