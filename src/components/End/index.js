@@ -117,6 +117,7 @@ class End extends Component {
         <div><p>{this.state.message}</p></div>
         <div><p>{this.state.advice}</p></div>
         <div>{this.state.button}</div>
+        <div className='button' onClick = {() => this.props.restart()}>Home</div>
         </div>
     );
   }
