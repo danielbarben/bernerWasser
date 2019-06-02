@@ -32,6 +32,13 @@ class Game extends Component {
     })
   }
 
+  restart = () => {
+    this.setState({
+      gameState: 'start',
+      level: 'leicht'
+    })
+  }
+
   ending = (correct, wrong, level) => {
     ReactGA.event({
       category: 'button',
@@ -70,7 +77,7 @@ class Game extends Component {
     }
     if (this.state.gameState === 'ending') {
       return (
-        <End correct = {this.state.correct} wrong={this.state.wrong} gameLevel = {this.state.level} again = {this.again}></End>
+        <End correct = {this.state.correct} wrong={this.state.wrong} gameLevel = {this.state.level} again = {this.again} restart = {this.restart}></End>
       )
     }
   }
