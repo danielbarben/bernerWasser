@@ -129,20 +129,19 @@ function svgmap() {
 		<circle id="Saanen" cx="151" cy="445" r="3"/>
 	</g>
 	<g id="Beschriftung">
-		<text className="ttt" transform="matrix(1 0 0 1 98 83)">Courtelary</text>
-		<text transform="matrix(1 0 0 1 148 111)">Biel</text>
-		<text transform="matrix(1 0 0 1 160 162)">Aarberg</text>
-		<text transform="matrix(1 0 0 1 218 208)">Bern</text>
-		<text transform="matrix(1 0 0 1 287 310)">Thun</text>
-		<text transform="matrix(1 0 0 1 336 210)">Langnau</text>
-		<text transform="matrix(1 0 0 1 295 59)">Wangen</text>
-		<text transform="matrix(1 0 0 1 368 347)">Interlaken</text>
-		<text transform="matrix(1 0 0 1 297 390)">Frutigen</text>
-		<text transform="matrix(1 0 0 1 156 445)" >Saanen</text>
+		<text transform="matrix(1 0 0 1 98 83)" className="mapText">Courtelary</text>
+		<text transform="matrix(1 0 0 1 148 111)" className="mapText">Biel</text>
+		<text transform="matrix(1 0 0 1 160 162)" className="mapText">Aarberg</text>
+		<text transform="matrix(1 0 0 1 218 208)" className="mapText">Bern</text>
+		<text transform="matrix(1 0 0 1 287 310)" className="mapText">Thun</text>
+		<text transform="matrix(1 0 0 1 336 210)" className="mapText">Langnau</text>
+		<text transform="matrix(1 0 0 1 295 59)" className="mapText">Wangen</text>
+		<text transform="matrix(1 0 0 1 368 347)" className="mapText">Interlaken</text>
+		<text transform="matrix(1 0 0 1 297 390)" className="mapText">Frutigen</text>
+		<text transform="matrix(1 0 0 1 156 445)" className="mapText">Saanen</text>
 	</g>
 </g>
 </svg>
-
 )
 }
 
