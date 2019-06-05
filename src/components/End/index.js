@@ -112,10 +112,10 @@ class End extends Component {
   }
   render() {
     return (
-      <div className="Ending">
-        <h1>{this.state.title}</h1>
-        <div><p>{this.state.message}</p></div>
-        <div><p>{this.state.advice}</p></div>
+      <div className="Ending bgimg gamebox">
+        <h1 className="title">{this.state.title}</h1>
+        <div><p className="text">{this.state.message}</p></div>
+        <div><p className="text">{this.state.advice}</p></div>
         <div>{this.state.button}</div>
         <div className='button' onClick = {() => this.props.restart()}>Home</div>
         </div>
