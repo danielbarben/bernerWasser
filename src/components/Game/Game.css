@@ -1,0 +1,90 @@
+.bgimg {
+background: url(../../img/img01.jpg) no-repeat center top fixed; 
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+}
+
+.gamebox {
+  text-align: center;
+  height: calc(100vh - 60px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  padding: 0 5px 0 5px;
+}
+
+.title {
+  font-family: 'RobotoCondensed Bold', Arial, sans-serif;
+  text-shadow: 0 0 0.1em rgb(20, 20, 80);
+  margin:10px 0 10px 0;
+  max-width:600px;
+}
+
+.text {
+  font-family: 'RobotoCondensed Bold', Arial, sans-serif;
+  text-shadow: 0 0 0.2em rgb(20, 20, 80);
+  margin-bottom: 6px;
+  max-width:600px;
+}
+
+
+@media only screen and (min-width: 600px) {
+  .bgimg {
+    background: url(../../img/img02.jpg) no-repeat center top fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+}
+.intro {
+	-webkit-animation: intro 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+	animation: intro 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+.grey {
+  background-color: rgb(147, 147, 147);
+}
+.green {
+  background-color: #009869;
+}
+.red {
+  background-color: #c13286;
+}
+
+@-webkit-keyframes intro {
+  0% {
+    letter-spacing: -0.5em;
+    -webkit-transform: translateZ(-700px);
+    transform: translateZ(-700px);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    opacity: 1;
+  }
+}
+@keyframes intro {
+  0% {
+    letter-spacing: -0.5em;
+    -webkit-transform: translateZ(-700px);
+    transform: translateZ(-700px);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    opacity: 1;
+  }
+}

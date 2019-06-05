@@ -1,33 +1,12 @@
-.bak {background: url(../../img/img01.jpg) no-repeat center top fixed; 
-}
-
 .Running {
-  text-align: center;
-  background-color:white;
-  height: calc(100vh - 60px);
-  width:100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  font-size: calc(10px + 2vmin);
-  background: url(../../img/img01.jpg) no-repeat center top fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-.ttt {
-  color:red;
-  background:red;
-}
+  }
+
 .anzeige, .btnbar, .points {
   width:100%;
   color: white;
 }
 
 .points {
-  font-size: 0.9em;
   display: flex;
   flex-flow: row wrap;
   align-items:center;
@@ -60,23 +39,17 @@
   justify-content: center;
 }
 
-.grey {
-  background-color: grey;
-}
-
-.green {
-  background-color: #009869;
-}
-
-.red {
-  background-color: #c13286;
-}
-
 #svgMap {
+  font-family: 'RobotoCondensed Regular';
   max-height: 100%;
   max-width: 100%;
 }
- 
+
+.mapText {
+  font: 'RobotoCondensed Regular';
+  fill: grey;
+  font-size:calc(16px + 2vmin);
+}
 .point {
   margin-left: 4px;
   border-radius:50%;
@@ -87,4 +60,13 @@
 
 * {
   box-sizing: border-box;
+}
+
+@media only screen and (min-width: 600px) {
+  .mapText {
+    font: 'RobotoCondensed Regular';
+    fill: grey;
+    font-size:calc(6px + 2vmin);
+    
+  }
 }
