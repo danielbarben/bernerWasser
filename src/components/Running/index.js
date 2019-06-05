@@ -29,9 +29,10 @@ class Running extends Component {
     //Seen und Flüsse färben
     document.getElementById('Seen').style.fill = this.colors[1];
     document.getElementById('Fluesse').style.stroke = this.colors[1];
-    let ttt= document.getElementById('Beschriftung')
-    ttt.style.fill ="grey"
-    ttt.style.fontSize = "16px"
+    //Schrift anpassen
+    //let fontStyle= document.getElementById('Beschriftung')
+    //fontStyle.style.fill ="grey"
+    //fontStyle.style.fontSize = "1.2em"
   }
   
   //Shuffle Questions
@@ -57,7 +58,7 @@ class Running extends Component {
     let newRiver = this.state.riversToFind[newCount]
     this.setState({
       questionCount: newCount,
-      message: 'Wie heisst das orange markierte Gewässer?',
+      message: 'Wie heisst das orange Gewässer?',
       currentRiver: newRiver,
       clickable: true
     }, function()  {
@@ -210,7 +211,7 @@ lgTest =() => {
       this.shuffle(newRivers);
       this.setState({
         riversToFind: newRivers,
-        message: 'Wie heisst das orange markierte Gewässer?',
+        message: 'Wie heisst das orange Gewässer?',
         currentRiver: newRivers[0]
       }, function() {
         this.ask();
@@ -222,7 +223,6 @@ lgTest =() => {
 componentDidMount() {
   this.start()
 }
-
   render() {
     let points = this.state.points.map((item, index) => {
       return <div className={item} key={index}></div>;
@@ -232,11 +232,10 @@ componentDidMount() {
       return <div position={index} id={item.riverId} className={item.color} onClick={()=> this.state.clickable ? this.verify(index) : ''} key={index}>{buttonText}</div>
     })
     return (
-      <div className = "Running">
+      <div className = "Running bgimg gamebox">
         <Mapsvg className = "svgMap"></Mapsvg>
-        <div className = "anzeige intro">{this.state.message}</div>
-        
-        <div className = "points">Punkte: {points}</div>        
+        <div className = "anzeige intro text">{this.state.message}</div>
+        <div className = "points text">Punkte: {points}</div>        
         <div className = "btnbar">{buttons}</div>
       </div>
     );
