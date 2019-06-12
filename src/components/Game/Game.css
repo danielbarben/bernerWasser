@@ -19,17 +19,17 @@ background-size: cover;
 }
 
 .title {
-  font-family: 'RobotoCondensed Bold', Arial, sans-serif;
+  font-family: 'RobotoCondensed Bold', sans-serif;
   text-shadow: 0 0 0.1em rgb(20, 20, 80);
   margin:10px 0 10px 0;
-  max-width:600px;
+  max-width:55ch;
 }
 
 .text {
-  font-family: 'RobotoCondensed Bold', Arial, sans-serif;
+  font-family: 'RobotoCondensed Bold', sans-serif;
   text-shadow: 0 0 0.2em rgb(20, 20, 80);
   margin-bottom: 6px;
-  max-width:600px;
+  max-width:55ch;
 }
 
 
