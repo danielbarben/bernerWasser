@@ -2,15 +2,17 @@
 }
 
 .Landingpage .button {
+	font-family: 'RobotoCondensed Regular', sans-serif;
+	text-decoration:none;
+	color:#ffffff;
 	background-color:#c20831;
 	cursor:pointer;
-	color:#ffffff;
-	display:inline-block;
-  width:180px;
-  margin: 6px;
-  padding: 8px 0 8px 0;
-	text-decoration:none;
-  animation: App-logo-spin infinite 20s linear;
+	width:180px;
+  height: 2em;
+	margin: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .Landingpage .button:hover {
 	background-color:#e4003a;

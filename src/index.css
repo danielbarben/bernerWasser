@@ -19,10 +19,11 @@
     
 body {
   margin: 0;
-  font-family: 'RobotoCondensed Regular';
+  font-family: 'RobotoCondensed Regular', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  height: calc(100vh - 60px);
+  width:100%;
+  height: 100%;
   text-align: center;
 }
 

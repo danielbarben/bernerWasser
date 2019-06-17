@@ -2,7 +2,11 @@
   "name": "bernerwasser",
   "version": "0.1.0",
   "private": true,
+  "homepage": "./",
   "dependencies": {
+    "@ta-interaktiv/react-masthead": "^5.0.0",
+    "@ta-interaktiv/react-paywall": "^1.1.4",
+    "@ta-interaktiv/semantic-ui": "^3.1.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-ga": "^2.5.7",
