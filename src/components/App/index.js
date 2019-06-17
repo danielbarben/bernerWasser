@@ -9,7 +9,7 @@ import Masthead from '@ta-interaktiv/react-masthead';
 function App() {
   return (
     <div className = 'App'>
-      <Masthead articleId='31500456' inverted='true'/>
+      <Masthead articleId='18521810' inverted='true'/>
       <Game />
       <Footer />
     </div>
@@ -17,4 +17,3 @@ function App() {
 }
 
 export default App;
-//<Masthead articleId='18521810' inverted='true'/>
