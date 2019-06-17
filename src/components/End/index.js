@@ -88,15 +88,15 @@ class End extends Component {
     switch (this.props.correct.length) {
       case 5: newTitle = 'Wow, alles richtig!'; newMessage = `Du hast ` + correctPrint + ` richtig erkannt.`; 
       break;
-      case 4: newTitle = 'Nicht schlecht!'; newMessage = `Du hast ` + correctPrint + ' richtig erkannt, nicht aber ' + wrongPrint + '.'; 
+      case 4: newTitle = 'Wow, nicht schlecht!'; newMessage = `Du hast ` + correctPrint + ' richtig erkannt, nicht aber ' + wrongPrint + '.'; 
       break;
-      case 3: newTitle = 'Dein Resultat'; newMessage = `Du hast ` + correctPrint + ' richtig erkannt, nicht aber ' + wrongPrint + '.';
+      case 3: newTitle = 'Nicht schlecht!'; newMessage = `Du hast ` + correctPrint + ' richtig erkannt, nicht aber ' + wrongPrint + '.';
       break;
-      case 2: newTitle = 'Geht so...'; newMessage = `Du hast ` + correctPrint + ' richtig erkannt, nicht aber ' + wrongPrint + '.';  
+      case 2: newTitle = 'Du bist auf gutem Weg.'; newMessage = `Du hast ` + correctPrint + ' richtig erkannt, nicht aber ' + wrongPrint + '.' 
       break;
-      case 1: newTitle = 'Geht so...'; newMessage = `Du hast ` + correctPrint + ' richtig erkannt, nicht aber ' + wrongPrint + '.'; 
+      case 1: newTitle = 'Komm, das kannst Du besser!'; newMessage = `Du hast ` + correctPrint + ' richtig erkannt, nicht aber ' + wrongPrint + '.';
       break;
-      case 0: newTitle = 'Das kannst Du besser!'; newMessage = `Du hast ` + wrongPrint + ' nicht erkannt.';  
+      case 0: newTitle = 'Das kannst Du bestimmt besser!'; newMessage = `Du hast ` + wrongPrint + ' nicht erkannt.';  
       break;
       default: newTitle = 'Oops'; newMessage = 'Entschuldigung, da ging etwas schief!';
     }
@@ -105,7 +105,6 @@ class End extends Component {
       message:newMessage
     })
   }
-
   componentDidMount() {
     this.getMessage();
     this.getAdvice();
@@ -113,10 +112,12 @@ class End extends Component {
   render() {
     return (
       <div className="Ending bgimg gamebox">
-        <h1 className="title">{this.state.title}</h1>
+        <h3 className="title">{this.state.title}</h3>
         <div><p className="text">{this.state.message}</p></div>
+        <p></p>
         <div><p className="text">{this.state.advice}</p></div>
         <div>{this.state.button}</div>
+        <p></p>
         <div className='button' onClick = {() => this.props.restart()}>Home</div>
         </div>
     );

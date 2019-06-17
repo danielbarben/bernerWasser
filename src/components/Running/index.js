@@ -56,9 +56,11 @@ class Running extends Component {
   next = () => {
     let newCount = this.state.questionCount + 1;
     let newRiver = this.state.riversToFind[newCount]
+    let tmp = 'Fluss'
+      if (data[newRiver].lg === 1) {tmp = 'See'}
     this.setState({
       questionCount: newCount,
-      message: 'Wie heisst das orange Gewässer?',
+      message: `Wie heisst der orange ${tmp}?`,
       currentRiver: newRiver,
       clickable: true
     }, function()  {
@@ -209,9 +211,11 @@ lgTest =() => {
         }
       })
       this.shuffle(newRivers);
+      let tmp = 'Fluss'
+      if (data[newRivers[0]].lg === 1) {tmp = 'See'}
       this.setState({
         riversToFind: newRivers,
-        message: 'Wie heisst das orange Gewässer?',
+        message: `Wie heisst der orange ${tmp}?`,
         currentRiver: newRivers[0]
       }, function() {
         this.ask();
