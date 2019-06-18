@@ -29,10 +29,6 @@ class Running extends Component {
     //Seen und Flüsse färben
     document.getElementById('Seen').style.fill = this.colors[1];
     document.getElementById('Fluesse').style.stroke = this.colors[1];
-    //Schrift anpassen
-    //let fontStyle= document.getElementById('Beschriftung')
-    //fontStyle.style.fill ="grey"
-    //fontStyle.style.fontSize = "1.2em"
   }
   
   //Shuffle Questions
@@ -50,8 +46,8 @@ class Running extends Component {
     return array;
   }
   end = () => {
-      this.props.gameEnding(this.state.correct, this.state.wrong, this.props.gameLevel)
-    }
+    this.props.gameEnding(this.state.correct, this.state.wrong, this.props.gameLevel)
+  }
   
   next = () => {
     let newCount = this.state.questionCount + 1;
@@ -108,27 +104,27 @@ class Running extends Component {
       if (item.riverId === wrongNumber) {
         newItem = {riverId: item.riverId, color: 'btn red'}
       }
-    return newItem
-  })
-  let newPoints = this.state.points.map(function(item,index) {
-    return index === count ? 'point red' : item
-  })
-  let newWrong = this.state.wrong;
+      return newItem
+    })
+    let newPoints = this.state.points.map(function(item,index) {
+      return index === count ? 'point red' : item
+    })
+    let newWrong = this.state.wrong;
     newWrong.push(wrongNumber);
-  this.setState({
-    btn: newBtn,
-    message: 'Leider falsch.',
-    points: newPoints,
-    clickable:false,
-    wrong: newWrong
-  }, function() {
-    //Gewässer grün färben
-    document.getElementById(data[rightNumber].id).style.stroke = this.colors[3];
-    //Gewässer rot färben
-    document.getElementById(data[wrongNumber].id).style.stroke = this.colors[4];
-    this.wait([rightNumber, wrongNumber]);
-  })
-}
+    this.setState({
+      btn: newBtn,
+      message: 'Leider falsch.',
+      points: newPoints,
+      clickable:false,
+      wrong: newWrong
+    }, function() {
+      //Gewässer grün färben
+      document.getElementById(data[rightNumber].id).style.stroke = this.colors[3];
+      //Gewässer rot färben
+      document.getElementById(data[wrongNumber].id).style.stroke = this.colors[4];
+      this.wait([rightNumber, wrongNumber]);
+    }) 
+  }
 
   verify = (clickedButton) => {
     // richtige Numer
@@ -180,53 +176,53 @@ class Running extends Component {
     })
   }
 
-dataTest = () => {
-  let color = this.colors[4];
-  data.forEach(function (ignore, i) {
-    let test = document.getElementById(data[i].id);
-    test.style.stroke = color
+  dataTest = () => {
+    let color = this.colors[4];
+    data.forEach(function (ignore, i) {
+      let test = document.getElementById(data[i].id);
+      test.style.stroke = color
     })
-}
+  }
 
-lgTest =() => {
-  let lg= [];
-  data.forEach(function (ignore, i) {
-    if (data[i].lg === 0) {
-      lg.push(i);
-    }
-  })
-  for (let i = 0; i < lg.length; i++) {
-    console.log(data[lg[i]].id)
-    document.getElementById(data[lg[i]].id).style.stroke = this.colors[2];
-  };
-}
+  lgTest =() => {
+    let lg= [];
+    data.forEach(function (ignore, i) {
+      if (data[i].lg === 0) {
+        lg.push(i);
+      }
+    })
+    for (let i = 0; i < lg.length; i++) {
+      console.log(data[lg[i]].id)
+      document.getElementById(data[lg[i]].id).style.stroke = this.colors[2];
+    };
+  }
 
   start = () => {
     let level = this.props.gameLevel;
-      let newRivers = [];
-      //Gewässer im passenden Level finden
-      data.forEach(function (ignore, i) {
-        if (data[i].level === level) {
-          newRivers.push(i);
-        }
-      })
-      this.shuffle(newRivers);
-      let tmp = 'Fluss'
-      if (data[newRivers[0]].lg === 1) {tmp = 'See'}
-      this.setState({
-        riversToFind: newRivers,
-        message: `Wie heisst der orange ${tmp}?`,
-        currentRiver: newRivers[0]
-      }, function() {
-        this.ask();
-        //this.colorize();
-        //this.lgTest();
-      })
-    }
+    let newRivers = [];
+    //Gewässer im passenden Level finden
+    data.forEach(function (ignore, i) {
+      if (data[i].level === level) {
+        newRivers.push(i);
+      }
+    })
+    this.shuffle(newRivers);
+    let tmp = 'Fluss'
+    if (data[newRivers[0]].lg === 1) {tmp = 'See'}
+    this.setState({
+      riversToFind: newRivers,
+      message: `Wie heisst der orange ${tmp}?`,
+      currentRiver: newRivers[0]
+    }, function() {
+      this.ask();
+      //this.colorize();
+      //this.lgTest();
+    })
+  }
 
-componentDidMount() {
-  this.start()
-}
+  componentDidMount() {
+    this.start()
+  }
   render() {
     let points = this.state.points.map((item, index) => {
       return <div className={item} key={index}></div>;
