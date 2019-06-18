@@ -112,7 +112,7 @@ class End extends Component {
   render() {
     return (
       <div className="Ending bgimg gamebox">
-        <h3 className="title">{this.state.title}</h3>
+        <h3 className="title intro">{this.state.title}</h3>
         <div><p className="text">{this.state.message}</p></div>
         <p/>
         <div><p className="text">{this.state.advice}</p></div>
