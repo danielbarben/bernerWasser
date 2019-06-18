@@ -22,27 +22,27 @@ class End extends Component {
     let newAdvice = '';
     let newLevel = '';
   if (this.props.gameLevel === 'leicht' && this.props.correct.length > 3) {
-    newAdvice = 'Schaffst Du auch ein höheres Level?';
+    newAdvice = 'Schaffen Sie auch ein höheres Level?';
     newLevel = 'mittel';
   }
   if (this.props.gameLevel === 'leicht' && this.props.correct.length <= 3) {
-    newAdvice = 'Versuchst Du es noch einmal?';
+    newAdvice = 'Versuchen Sie es noch einmal?';
     newLevel = 'leicht';
   }
   if (this.props.gameLevel === 'mittel' && this.props.correct.length > 3) {
-    newAdvice = 'Schaffst Du auch ein höheres Level?';
+    newAdvice = 'Schaffen Sie auch ein höheres Level?';
     newLevel = 'schwierig';
   }
   if (this.props.gameLevel === 'mittel' && this.props.correct.length <= 3) {
-    newAdvice = 'Versuchen es mit einem einfacheren Level';
+    newAdvice = 'Versuchen Sie es mit einem einfacheren Level.';
     newLevel = 'leicht'
   }
   if (this.props.gameLevel === 'schwierig' && this.props.correct.length > 3) {
-    newAdvice = 'Schaffst Du es noch einmal?';
+    newAdvice = 'Schaffen Sie es noch einmal?';
     newLevel = 'schwierig';
   }
   if (this.props.gameLevel === 'schwierig' && this.props.correct.length <= 3) {
-    newAdvice = 'Versuch es doch mit einem einfacheren Level';
+    newAdvice = 'Versuchen Sie es doch mit einem einfacheren Level.';
     newLevel = 'mittel'
   }
   this.setState({
@@ -86,17 +86,17 @@ class End extends Component {
       wrongPrint = wrongTmp[0]
     }
     switch (this.props.correct.length) {
-      case 5: newTitle = 'Wow, alles richtig!'; newMessage = `Du hast ` + correctPrint + ` richtig erkannt.`; 
+      case 5: newTitle = 'Wow, alles richtig!'; newMessage = `Sie haben ` + correctPrint + ` richtig erkannt.`; 
       break;
-      case 4: newTitle = 'Wow, nicht schlecht!'; newMessage = `Du hast ` + correctPrint + ' richtig erkannt, nicht aber ' + wrongPrint + '.'; 
+      case 4: newTitle = 'Wow, nicht schlecht!'; newMessage = `Sie haben ` + correctPrint + ' richtig erkannt, nicht aber ' + wrongPrint + '.'; 
       break;
-      case 3: newTitle = 'Nicht schlecht!'; newMessage = `Du hast ` + correctPrint + ' richtig erkannt, nicht aber ' + wrongPrint + '.';
+      case 3: newTitle = 'Nicht schlecht!'; newMessage = `Sie haben ` + correctPrint + ' richtig erkannt, nicht aber ' + wrongPrint + '.';
       break;
-      case 2: newTitle = 'Du bist auf gutem Weg.'; newMessage = `Du hast ` + correctPrint + ' richtig erkannt, nicht aber ' + wrongPrint + '.' 
+      case 2: newTitle = 'Du bist auf gutem Weg.'; newMessage = `Sie haben ` + correctPrint + ' richtig erkannt, nicht aber ' + wrongPrint + '.' 
       break;
-      case 1: newTitle = 'Komm, das kannst Du besser!'; newMessage = `Du hast ` + correctPrint + ' richtig erkannt, nicht aber ' + wrongPrint + '.';
+      case 1: newTitle = 'Komm, das kannst Du besser!'; newMessage = `Sie haben ` + correctPrint + ' richtig erkannt, nicht aber ' + wrongPrint + '.';
       break;
-      case 0: newTitle = 'Das kannst Du bestimmt besser!'; newMessage = `Du hast ` + wrongPrint + ' nicht erkannt.';  
+      case 0: newTitle = 'Das kannst Du bestimmt besser!'; newMessage = `Sie haben ` + wrongPrint + ' nicht erkannt.';  
       break;
       default: newTitle = 'Oops'; newMessage = 'Entschuldigung, da ging etwas schief!';
     }
@@ -114,10 +114,10 @@ class End extends Component {
       <div className="Ending bgimg gamebox">
         <h3 className="title">{this.state.title}</h3>
         <div><p className="text">{this.state.message}</p></div>
-        <p></p>
+        <p/>
         <div><p className="text">{this.state.advice}</p></div>
         <div>{this.state.button}</div>
-        <p></p>
+        <p/>
         <div className='button' onClick = {() => this.props.restart()}>Home</div>
         </div>
     );
