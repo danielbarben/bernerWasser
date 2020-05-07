@@ -233,7 +233,7 @@ class Running extends Component {
     })
     return (
       <div className = "Running bgimg gamebox">
-        <Mapsvg className = "svgMap"></Mapsvg>
+        <Mapsvg className = "svgMap" />
         <div className = "anzeige intro text">{this.state.message}</div>
         <div className = "points text">Punkte: {points}</div>        
         <div className = "btnbar">{buttons}</div>

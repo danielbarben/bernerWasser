@@ -4,12 +4,15 @@
   "private": true,
   "homepage": "./",
   "dependencies": {
-    "@ta-interaktiv/react-masthead": "^5.0.0",
-    "@ta-interaktiv/react-paywall": "^1.1.4",
-    "@ta-interaktiv/semantic-ui": "^3.1.1",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "react-ga": "^2.5.7",
+    "@ta-interaktiv/api-access": "^1.0.2",
+    "@ta-interaktiv/react-masthead": "^6.0.4",
+    "@ta-interaktiv/react-share-buttons": "^4.1.2",
+    "@ta-interaktiv/react-theme-switch": "^2.0.2",
+    "@ta-interaktiv/semantic-ui": "^3.2.0",
+    "@ta-interaktiv/types": "^0.3.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-ga": "^2.7.0",
     "react-scripts": "3.0.1"
   },
   "scripts": {
